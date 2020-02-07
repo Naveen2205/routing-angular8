@@ -6,7 +6,12 @@ import { DetailComponent } from './list-detail/detail/detail.component';
 
 
 const routes: Routes = [
-  { path: '', component: ListDetailComponent },
+  { path: '', redirectTo: 'console', pathMatch: 'full'},
+  { 
+    path: 'console',     
+    loadChildren: ()=>import('./list-detail/list-detail-module/list-detail-module.module').then(m=>m.ListDetailModuleModule)
+
+  },
 ];
 
 @NgModule({

@@ -13,7 +13,6 @@ import { ListDetailModuleModule } from './list-detail/list-detail-module/list-de
 @NgModule({
   declarations: [
     AppComponent,
-    ListDetailComponent,
   ],
   imports: [
     BrowserModule,
