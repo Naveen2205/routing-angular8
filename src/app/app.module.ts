@@ -3,16 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ListDetailComponent } from './list-detail/list-detail.component';
+import { ListComponent } from './list-detail/list/list.component';
+import { DetailComponent } from './list-detail/detail/detail.component';
+import { ListDetailService } from './list-detail/list-detail.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ListDetailModuleModule } from './list-detail/list-detail-module/list-detail-module.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListDetailComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    ListDetailModuleModule,
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [ListDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

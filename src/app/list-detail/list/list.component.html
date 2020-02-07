@@ -1,0 +1,7 @@
+<h1>List component</h1>
+<p>{{errorMessage}}</p>
+<div>
+    <p *ngFor = "let i of storeData">
+        {{ i.id }}: <button type="button" class="btn btn-primary">{{ i.name }}</button>
+    </p>
+</div>
